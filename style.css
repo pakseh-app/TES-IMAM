@@ -9757,84 +9757,60 @@ body.gallery-lock {
 .sparkle-layer { z-index: 109 !important; }
 
 /* =====================================================
-   FINAL MOBILE NAME FIX — NAMA PENGANTIN PANJANG
-   Nama panjang tetap rapi di HP dan tidak melebar keluar layar.
+   FIX NAMA PENGANTIN — RESPONSIVE MOBILE
+   Nama panjang tetap rapi dan tidak terdorong keluar layar.
 ===================================================== */
 .home-couple-names {
-    width: min(94vw, 430px);
+    width: min(92vw, 390px);
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
-    justify-items: center;
     gap: 7px;
-    padding: 0 8px;
     box-sizing: border-box;
-    overflow: visible;
 }
 
 .home-couple-names > span {
     min-width: 0;
-    width: 100%;
-    max-width: 100%;
+    max-width: 46%;
+    flex: 1 1 0;
     text-align: center;
-    line-height: 1.08;
+    white-space: normal;
     overflow-wrap: anywhere;
     word-break: normal;
+    line-height: 1.05;
 }
 
-/* JS efek huruf sebelumnya memberi setiap kata white-space:nowrap.
-   Untuk nama pengantin, kata boleh turun baris agar nama panjang tetap muat. */
-.home-couple-names .typing-word {
-    white-space: normal !important;
-}
-
-.home-couple-names strong {
+.home-couple-names > strong {
     flex: 0 0 auto;
     white-space: nowrap;
     line-height: 1;
 }
 
-/* Caption di bawah foto Polaroid juga aman untuk nama lengkap panjang. */
-.polaroid-caption {
-    white-space: normal !important;
-    overflow-wrap: anywhere;
-    word-break: normal;
-    line-height: 1.05;
-    min-height: 1.05em;
-}
-
-@media (max-width: 520px) {
+@media (max-width: 480px) {
     .home-couple-names {
-        width: min(94vw, 400px);
-        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-        gap: 4px;
-        padding: 0 6px;
-        font-size: clamp(21px, 6.2vw, 27px);
+        width: min(94vw, 380px);
+        font-size: 24px;
         letter-spacing: 1.2px;
     }
-
-    .home-couple-names strong {
-        font-size: clamp(21px, 6vw, 25px);
+    .home-couple-names > span {
+        max-width: 44%;
     }
-
-    .polaroid-caption {
-        font-size: clamp(16px, 4.8vw, 20px) !important;
-        letter-spacing: 1px;
+    .home-couple-names > strong {
+        font-size: 22px;
     }
 }
 
 @media (max-width: 360px) {
     .home-couple-names {
-        width: 96vw;
-        font-size: 20px;
-        gap: 3px;
-        padding: 0 4px;
+        width: 94vw;
+        gap: 5px;
+        font-size: 21px;
+        letter-spacing: .8px;
     }
-
-    .home-couple-names strong {
+    .home-couple-names > span {
+        max-width: 45%;
+    }
+    .home-couple-names > strong {
         font-size: 20px;
     }
 }
