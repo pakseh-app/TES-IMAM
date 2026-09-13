@@ -42,7 +42,7 @@ window.INVITATION_DATA = {
     akadAddress: 'Bringin, Kec. Bringin, Kabupaten Semarang, Jawa Tengah 50772',
     akadMapUrl: 'https://maps.app.goo.gl/PiCq7Ngi9By7ocUm9',
 
-    receptionTime: '09:00 Wib-selesai',
+    receptionTime: '09:00 Wib-Selesai',
 
     // ─────────────────────────────────────────────────────
     // COUNTDOWN — TARGET HITUNG MUNDUR
